@@ -1,0 +1,26 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['USERNAME'] %>
+  password:  "<%= ENV['PASSWORD'] %>"
+  host: localhost
+  socket: /tmp/mysql.sock
+
+development:
+  <<: *default
+  database:  book_shiori_development
+
+test:
+  <<: *default
+  database: book_shiori_test
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://railsguides.jp/configuring.html#データベース接続をプールする
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database:  book_shiori_production
+  username: root
+  password: <%= ENV['BOOK_SHIORI_DATABASE_PASSWORD'] %>
