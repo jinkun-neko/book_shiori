@@ -11,7 +11,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "node-sass": "^7.0.1",
+    "node-sass": "^4.13.0",
     "webpack-dev-server": "^4.7.4"
   }
 }
