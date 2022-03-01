@@ -18,9 +18,7 @@
     "yarn": "1.22.17"
   },
   "scripts": {
-    "start": "node index.js",
-    "build": "ng build",
-    "heroku-postbuild": "ng build --prod" 
+    "start": "node index.js"
   },
   "version": "0.1.0",
   "devDependencies": {
