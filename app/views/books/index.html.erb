@@ -1,0 +1,19 @@
+<%
+=begin%>
+ <% provide(:title, '本の一覧') %>
+    <div class="margin-top5">
+      <h1 class="brown4">本の一覧</h1>
+        <p>今まで読んだ本の一覧です。今まで読んだ本の一覧です。</p>
+          <div class="space2">
+            <%= link_to "最終確認用ボタン", "#", class: "btn btn-primary" %>
+              <%= render partial: 'layouts/img_default', locals: { article: @book } %>
+        </div> 
+    </div>
+<%= link_to image_tag("/book.png", class:"plus"), new_book_path  %> 
+<%
+=end%>
+
+<h1>じんくん</h1>
+<h1>じんくん</h1>
+<h1>じんくん</h1>
+

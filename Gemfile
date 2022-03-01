@@ -13,7 +13,12 @@ gem 'jbuilder', '~> 2.7' #jsonファイルを管理できるファイル
 gem 'carrierwave'  #ファイルをアップロードできるgem
 gem 'mini_magick'  #画像を保存できるgem
 gem 'rails-i18n' #英語を日本語に翻訳するgem
-gem 'bootstrap-sass', '3.3.7' #cssのフレームワーク
+gem 'devise'  #ログイン機能を実装する。
+gem 'omniauth-twitter' #twitter認証
+gem 'omniauth-google-oauth2'  #google認証
+gem 'bootstrap', '~> 5.1.3' #cssのフレームワーク
+gem 'bootstrap-sass', '3.4.1' #bootstrap-sassは、LESSをSassへ変換し、必要なBootstrapファイルを現在のアプリケーションですべて利用できるようにします。
+gem 'jquery-rails' #bootstrap の動きに関わるgem
 gem 'bootsnap', '>= 1.4.2', require: false #起動時間を短縮させる
 
 group :development, :test do
