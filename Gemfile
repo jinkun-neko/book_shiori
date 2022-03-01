@@ -42,6 +42,8 @@ group :test do
   gem 'capybara', '~> 2.15.4' #ブラウザ上のテストをできるようにするgem
   gem 'webdrivers'  #ブラウザ上のテスト、chormでできるようにする。
   gem 'launchy', '~> 2.4.3'  #ブラウザテストをブラウザで確認できる。
+  gem 'guard', '2.16.2'
+  gem 'guard-rspec', require: false #テスト自動化
 end
 
 # 時間を見やすくコンバートさせるためのもの。
