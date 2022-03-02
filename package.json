@@ -17,9 +17,6 @@
     "npm": "6.14.15",
     "yarn": "1.22.17"
   },
-  "scripts": {
-    "start": "node index.js"
-  },
   "version": "0.1.0",
   "devDependencies": {
     "firebase": "^9.6.7",
