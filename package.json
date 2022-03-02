@@ -12,9 +12,6 @@
     "node-gyp": "^6.0.1",
     "turbolinks": "^5.2.0"
   },
-  "scripts": {
-    "start": "webpack-dev-server --hot"
-  },
   "engines": {
     "node": "14.18.1",
     "npm": "6.14.15",
