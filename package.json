@@ -13,8 +13,7 @@
     "turbolinks": "^5.2.0"
   },
   "scripts": {
-    "test": "echo \"Error:no test specified\" && exit 1",
-    "start": "node dev/api.js"
+    "start": "webpack-dev-server --hot"
   },
   "engines": {
     "node": "14.18.1",
