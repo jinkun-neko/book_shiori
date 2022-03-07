@@ -1,394 +1,103 @@
 
-//user
-.log_in{
-  position: absolute;
-  right: 25px;
-}
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Kosugi');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
 
-.icon_maru {
-  border-radius:  100px;
-}
-
-//books
-
-.shupan {
-  margin-top: 35px;
-  margin-bottom: 5px;
-}
-
-.shupan2 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-
- //label
-.label{
-  margin-left: -5px;
-  font-size: 14px;
-  display: inline-block; 
-  color: rgb(102, 67, 47)
-}
-.label2{
-margin-left: 3px;
-font-size: 14px;
-display: inline-block; 
-color: rgb(102, 67, 47)
-}
-.label3 {
-    margin-left: -5px;
-    font-size: 14px;
-    display: inline-block; 
-    color: rgb(102, 67, 47)
-}
-
-.label_green{
-margin-left: 2px;
-display: inline-block;
-width: auto; 
-color: #429442;
-}
-.label_red{
-margin-left: 2px;
-display: inline-block;
-width: auto; 
-color: rgb(255, 89, 89);
-}
-.label_green2{
-margin-left: 2px;
-display: inline-block;
-width: auto; 
-color: #429442;
-}
-.label_red2{
-margin-left: 2px;
-display: inline-block;
-width: auto; 
-color: rgb(255, 89, 89);
-}
-
-//sign_up
-
-.sign_up{
-  color: indianred;
-}
-
- //margin
-.margin-top{
-  margin-top: 50px;
-}
-.margin-top2 {
-  margin-top: 110px;
-}
-
- // 新規登録
-.margin-top3 {   
-    margin-top: 80px;
-    margin-bottom: 40px;
-}
-.margin-top4 {
-  margin-top: 30px;
-  }
-  .margin-top5 {
-    margin-top: 40px;
-  }
-  //ログイン
-  .margin-top6 {
-    margin-top: 100px;
-    margin-bottom: 30px;
-  }
-  //shiori
-  .margin-top7 {   
-      margin-top: 50px;
-  }
-
- //space
-
-.space {
-  margin: 0 30px 0 30px;
-}
-
-.space2{
-  margin-top: 25px;
-}
-
-//sukoshi
-
-.sucoshi{
-  margin-top: 10px;
-}
-.sucoshi2 {
-  margin-top: 5px;
-}
-.sucoshi3 {
-  margin-top: 15px;
-}
-.sucoshi3 {
-  margin-top: 30px;
-}
-
-//shita
-
-.shita{
-  margin-bottom: 30px;
-}
-.shita2 {
-  margin-bottom: 30px;
-}
-.shita3 {
-  margin-bottom: 50px;
-}
-
-//sukima
-
-.sukima {
-  margin-top: 30px;
-}
-.sukima2 {
-  margin-top: 20px;
-}
-.sukima3 {
-  margin-top: 30px;
-}
-.sukima4 {
-  margin-top: 20px;
-  margin-bottom: 25px;
-}
-.sukima5 {
-  margin-top: -15px;
-}
-.sukima6 {
-  margin-top: 28px;
-}
-
-//color
-.brown_en {
-  color:rgb(91, 33, 0);
-}
-.brown  {
-  margin-bottom: 0px;
-  color: rgb(91, 33, 0);
-  font-family: 'Kosugi', sans-serif;
-}
-.brown2 {
-  color: rgb(91, 33, 0);
-  font-family: 'Kosugi', sans-serif;
-}
-.brown3 {
-  margin-bottom: 0px;
-  color: rgb(91, 33, 0);
-  font-family: 'Kosugi', sans-serif;
-}
-.brown4 {
-  color: rgb(91, 33, 0);
-  font-family: 'Kosugi', sans-serif;
-}
-.link-color {
-  font-size: 15px;
-  padding: 4px;
-  color: #fff;
-  background-color: #256b25;
-  border-radius: 5px;
-  box-shadow: 3px 3px 4px rgb(122, 121, 121);
-}
-.link-color:hover {
-  font-size: 15px;
-  padding: 4px;
-  transition: 0.09s;  
-  color: #fff;
-  position: relative;
-  left: 3px;
-  top: 3px;
-  text-decoration: none;
-  background-color:#67a867;
-  box-shadow: none;
-}  
-.red{
-  color: red;
-}
-.green {
-  color: green;
-  font-size: 15px;
-}
-.shiori{
-  color: #0B3B0B;
-}
-.phot {
-  color: #0B3B0B;
-  margin: 30px 30px;
-}
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-}
-.turn{
-  width: 50px;  
-  height: auto;  
-  transition: 0.09s;  
-  position: fixed;
-  bottom:  50px;
-  left: 35px;
-  filter: drop-shadow(2px 2px 2px rgb(170, 170, 170));
-}
-.turn:active {
-  width: 49px;  
-  height: auto; 
-  opacity: 0.5;
-  position: fixed;
-  bottom:  49px;
-  left: 34px;
-  filter: drop-shadow(0 0 0);
-}
-.plus {
-    width: 80px;  
-    height: auto;  
-    opacity: 1.0;
-    position: fixed;
-    bottom: 58px;
-    right: 30px;
-    transition: 0.1s;  
-    filter: drop-shadow(2px 2px 2px rgb(138, 138, 138));
-}
-
-.plus:active {
-    width: 79px;  
-    height: auto;  
-    opacity: 0.5;
-    filter: drop-shadow(0 0 0);
-    position: fixed;
-    bottom: 57px;
-    right: 29px;
-}
-header a {
-  color: #fff;
-}
-//shiori
-.btn_new{
-  display: block; 
-  text-align: center;
-  width: 150px;
-  border-radius: 5px;
-  background-color:rgba(91, 33, 0, 0.97); 
-  border-color:rgba(91, 33, 0, 0.97); 
-  padding: 15px 25px;
-  margin: 30px auto;
-}
-.btn_new:hover{
-  display: block; 
-  color: #fff;
-  text-decoration: none;
-  background-color:rgba(82, 65, 55, 0.97); 
-  border-color:rgba(82, 65, 55, 0.97); 
-  padding: 15px 25px;
-  margin: 30px auto;
-}
-.btn-center{
-text-align: center;
-}
-.book-index-item{
-  margin: 20px 30px;
-  padding-top: 15px;
-}
-.link {
-  font-size: 15px;
-  background-color: green;
-  text-decoration: none;
-}
-.top {
-  font-size: 15px;
-}
-
-.moji {
-font-size: 15px;
-margin-top: 15px;
-}
-
-/* mixins, variables, etc. */
-
-$gray-medium-light: #eaeaea;
-
-@mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
-}
-
-/* universal */
-
+/*********************************
+	初期設定
+*********************************/
 body {
-    margin: 0px;
-    padding-top: 60px;
-    padding-bottom: 50px;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll; //y = 縦のスクロール
-    overflow-x: hidden; //x = 横のスクロールはダメですよ。
-  }
-
-  main {
-    margin-top: 30px;
-  }
-
-  section {
-    overflow: auto;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  .center {
-    text-align: center;
-  }
-  
-  .center h1 {
-    margin-bottom: 10px;
-  }
-
-/*メインコンテンツ*/
-#contents {
-  padding-bottom: 30px; /*フッターの高さと同じ*/  
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll; //y = 縦のスクロール
+  overflow-x: hidden; //x = 横のスクロールはダメですよ。
+  text-align: center;
 }
 
-#center_layout{
-  width: 700px;	   /*全体の幅を指定する*/  
-  margin: 0 auto;    /*マージンの指定をする、ブラウザ対策*/
-  text-align:left;   /*全体を左揃えにする。*/
+section {
+  overflow: auto;
+}
+textarea {
+  resize: vertical;
+}
+.center {
+  text-align: center;
+}
+.center h1 {
+  margin-bottom: 10px;
 }
 
-  /* typography */
+/*********************************
+	文字のスタイル
+*********************************/
 h1, h2, h3, h4, h5, h6 {
-    line-height: 1;
-  }
-  
-  h1 {
-    font-size: 3em;
-    letter-spacing: 5px;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  h2 {
-    font-size: 1.2em;
-    letter-spacing: -1px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-weight: normal;
-    color: #777;
-  }
-  
-  p {
-    text-align: center;
-    letter-spacing: 1px;
-    font-size:  12px;
-    line-height: 1.8em;
-  }
+  line-height: 1;
+}
+h1 {
+  color: #0B3B0B;
+  font-size: 3em;
+  letter-spacing: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: rgb(60, 60, 60);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  font-family: 'Noto Sans JP', sans-serif;
+}
 
-  /* header */
-  .navbar-brand {
+/*********************************
+	ヘッダーの設定
+*********************************/
+.logo {
+  float: left;
+  margin-left: 80px;
+  font-size: 2.0em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+.logo:hover {
+  opacity: 0.5;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.5;
+}
+.navbar-nav{
+  margin-right: 60px;
+  font-size: 0.8em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+li{
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .logo {
     float: left;
-    margin-right: 10px;
+    margin-left: 10px;
     font-size: 1.7em;
     color: #fff;
     text-transform: uppercase;
@@ -396,22 +105,40 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 10px;
     font-weight: bold;
   }
-  .navbar-brand:hover {
-    background-color: #0B3B0B;
-    text-decoration: none;
-  }
   .navbar-nav{
-  color: #fff;
+    margin-right: 10px;
+    font-size: 0.9em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  li{
+    margin-left: 10px;
+  }
 }
 
-/* footer */
+@media screen and (max-width: 700px) {
+  .logo {
+    margin-left: 175px;
+    font-size: 2.0em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+  }
+}
+
+/*********************************
+	フッターの設定
+*********************************/
 #footerWrap{
   width:100%;
   position: absolute;/*←相対位置*/
   padding-bottom: 30px;/*←footerの高さ*/
   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
 }
-
 footer {
     width: 100%; /* フッター幅を指定*/
     height: 30px; 
@@ -419,181 +146,75 @@ footer {
     background-color: #0B3B0B;
     color: #fff;
     text-align: center;
-    padding: 5px 0;
+    padding: 3px 0;
     position: fixed;/*←絶対位置*/
     right: 0px;
     bottom: 0; /*下に固定*/
 }
-
 footer a {
   color: #fff;
-  background-color: #0B3B0B;
-}
-
-footer a:hover {
-  color: #0B3B0B;
-  background-color: rgb(255, 255, 255);
-  padding: 5px 0;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  font-weight: bold;
   text-decoration: none;
 }
-
+footer a:hover {
+  color: #fff;
+  opacity: 0.5;
+}
 footer ul {
   float: right;
   margin-right: 20px;
   list-style: none;
 }
-
 footer ul li {
   float: left;
   margin-left: 15px;
 }
 
-a {
-  color: rgb(255, 255, 255); 
-}
-
-
-a:hover {
-  opacity: 0.5;
-}
-
-/* miscellaneous */
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 35px;
-  @include box_sizing;
-}
-
-/* sidebar */
-.user_defult_icon{
-  height: 200px;
-  width: auto;
-}
-aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size:  35px;
-      text-align: left;
-      letter-spacing: 3px;
-      padding-left: 10px;
-      margin-bottom: 3px;
-      margin-left: 4px;
-      margin-top: 5px;
-    }
-  }
-}
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-.gravatar_edit {
-  margin-top: 15px;
-}
-
-/* forms */
-input, textarea, select, .uneditable-input {
-  border: 1px solid  #0B3B0B;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
-}
-
-label {
-  display: block; 
-}
-
-.com {
-margin-top: 25px; //ボタンをtop25px分離れさせた。
-}
-
-input {
-  height: auto !important;
-}
-
-#error_explanation h2 { //エラーメッセージの設定
-  text-align: center; //真ん中に
-  font-weight: bold; //太く
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px -7px 0;
-  background-color: rgb(255, 255, 255);
-  color: #fff; 
-}
-
-#error_explanation ul li {
-  font-size: 12px;
-  list-style: circle;
-}
-
-#error_explanation {
-  color:  #a10000; 
-  margin: 20px 0 20px 0;
-  position: relative; //エラーメッセージの位置
-  ul {
-    color:  #a10000; //エラー表の中の色。
-    margin: 0 0 20px 0; //エラーメッセージの上だけ空白を空けるため。
-  }
-}
-
-// .field_with_errors {
-//   @extend .has-error;
-//   .form-control {
-//     // color: $state-danger-text;
-//   }
-// }
-
-.checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
-  span {
-    margin-left: 20px;
-    font-weight: normal;
-  }
-}
-
-#session_remember_me {
-  width: auto;
-  margin-left: 0;
-}
-
-#error_explanation {
-  color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
-}
-
-// .field_with_errors {
-//   @extend .has-error;
-//   .form-control {
-//     color: $state-danger-text;
-//   }
-// }
-
-// header
-
-// header-humberger
+//header_toggler
 .navbar-dark .navbar-toggler{
   outline: none;
   border: none;
   opacity: 0.8;
 }
 
-// header-end
+/*********************************
+	formの設定
+*********************************/
+//alert
+.alert {
+  color: rgb(241, 54, 54);
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: rgb(255, 193, 193) wavy underline;
+}
+.form-label{
+  font-size: 14px;
+  color: #0B3B0B;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.margin-left{
+  margin-left: 150px;
+}
+.btn btn-success{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+@media screen and (max-width: 1000px) {
+  .margin-left{
+    margin-left: 80px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .margin-left{
+    margin-left: 50px;
+  }
+  .alert {
+    color: rgb(241, 54, 54);
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: rgb(255, 193, 193) wavy underline;
+    font-size: 14px;
+  }
+}

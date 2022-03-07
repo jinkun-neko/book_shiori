@@ -1,0 +1,28 @@
+<% provide(:title, "ログイン") %>
+  <h1>ログイン</h1>
+    <div class="row">
+      <div class="margin-left">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="mb-3">
+            <%= f.label :email, class:'form-label' %><br/>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control w-75' %>
+          </div>
+
+          <div class="mb-3">
+            <%= f.label :password, class:'form-label' %><br/>
+            <%= f.password_field :password, autocomplete: "current-password", class: 'form-control w-75' %>
+          </div>
+
+          <% if devise_mapping.rememberable? %>
+            <div class="mb-3">
+              <label>
+                <%= f.check_box :remember_me %>
+                <span>次回から自動でログイン</span>
+              </label>
+            </div>
+        <% end %>
+          <%= f.submit "ログイン", class: "btn btn-success w-75", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);' %>
+        <% end %>
+      <%= render "users/shared/links" %>
+  </div>
+<div>

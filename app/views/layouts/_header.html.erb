@@ -1,33 +1,41 @@
 <header>
-   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style ="background-color:#0B3B0B;">
+   <nav class="navbar navbar-expand-md navbar-dark fixed-top" style ="background-color:#0B3B0B;">
       <div class="container-fluid">
-      <a class="navbar-brand" href="#">SHIORI</a>
+      <a class="navbar-brand logo" href="#">SHIORI</a>
+            <% if user_signed_in? %>
+            
+            <% else %>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
-         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <%= link_to 'Home', root_path,class:"nav-link active" %>
+                  </li>
                <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                  <a class="nav-link active" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                  <a class="nav-link active" href="#">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
-               </a>
-               <ul class="dropdown-menu ml-auto active" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-               </ul>
+                     <%= link_to 'サインアップ', new_user_registration_path,class:"nav-link active" %>
                </li>
-               </ul>
+               <li class="nav-item">
+                     <%= link_to 'ログイン', new_user_session_path,class:"nav-link active" %>
+               </li>
+               <% end %>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Dropdown link
+                  </a>
+                  <ul class="dropdown-menu ml-auto active" aria-labelledby="navbarDropdownMenuLink">
+   <%
+=begin%>
+<li><%= link_to current_user.username, pages_show_path,class:"dropdown-item" %></li>  
+<%
+=end%>
+                     <li><%= link_to 'プロフィール変更', edit_user_registration_path,class:"dropdown-item" %></li>
+                     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"dropdown-item" %></li>
+                  </ul>
+                  </li>
+                  </ul>
+            </div>
          </div>
-      </div>
-   </nav>
+      </nav>
 </header>

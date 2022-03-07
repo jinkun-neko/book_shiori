@@ -16,6 +16,9 @@ gem 'rails-i18n' #英語を日本語に翻訳するgem
 gem 'devise'  #ログイン機能を実装する。
 gem 'omniauth-twitter' #twitter認証
 gem 'omniauth-google-oauth2'  #google認証
+gem 'omniauth-rails_csrf_protection' #omniauthに脆弱性対策
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 gem 'bootstrap', '~> 5.1.3' #cssのフレームワーク
 gem 'bootstrap-sass', '3.4.1' #bootstrap-sassは、LESSをSassへ変換し、必要なBootstrapファイルを現在のアプリケーションですべて利用できるようにします。
 gem 'jquery-rails' #bootstrap の動きに関わるgem

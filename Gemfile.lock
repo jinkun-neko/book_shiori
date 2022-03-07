@@ -107,6 +107,9 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.10.2)
+      devise (>= 4.8.0)
+    devise-i18n-views (0.3.7)
     diff-lcs (1.5.0)
     dotenv (2.7.6)
     dotenv-rails (2.7.6)
@@ -214,6 +217,9 @@ GEM
     omniauth-oauth2 (1.7.2)
       oauth2 (~> 1.4)
       omniauth (>= 1.9, < 3)
+    omniauth-rails_csrf_protection (1.0.1)
+      actionpack (>= 4.2)
+      omniauth (~> 2.0)
     omniauth-twitter (1.4.0)
       omniauth-oauth (~> 1.1)
       rack
@@ -386,6 +392,8 @@ DEPENDENCIES
   capybara (~> 2.15.4)
   carrierwave
   devise
+  devise-i18n
+  devise-i18n-views
   dotenv-rails
   factory_bot_rails (~> 4.10.0)
   faker!
@@ -399,6 +407,7 @@ DEPENDENCIES
   mini_magick
   mysql2 (>= 0.4.4)
   omniauth-google-oauth2
+  omniauth-rails_csrf_protection
   omniauth-twitter
   pg
   puma (~> 4.1)
