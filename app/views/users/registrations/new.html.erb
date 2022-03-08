@@ -1,28 +1,33 @@
 <% provide(:title, "新規登録") %>
   <h1>新規登録</h1>
-    <div class="row">
-      <div class="margin-left">
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="mb-3">
-            <%= f.label :email, class:'form-label' %><br/>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control w-75' %>
-          </div>
+    
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
 
-          <div class="mb-3">
-            <%= f.label :password, class:'form-label' %><br/>
-            <%= f.password_field :password, autocomplete: "current-password", class: 'form-control w-75' %>
-          </div>
+      <div class="margin-left_registrations_new">
+        <div class="mb-3">
+          <%= f.label :email , class:'form-label' %><br/>
+          <%= f.email_field :email , class: 'form-control w-75'  %>
+        </div>
 
-          <% if devise_mapping.rememberable? %>
-            <div class="mb-3">
-              <label>
-                <%= f.check_box :remember_me %>
-                <span>次回から自動でログイン</span>
-              </label>
-            </div>
-        <% end %>
-          <%= f.submit "ログイン", class: "btn btn-success w-75", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);' %>
-        <% end %>
+        <div class="mb-3">
+          <%= f.label :password , class:'form-label' %>
+          <% if @validatable %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br/>
+          <%= f.password_field :password, autocomplete: "off" , class: 'form-control w-75'  %>
+        </div>
+
+        <div class="mb-4">
+          <%= f.label :password_confirmation , class:'form-label' %><br/>
+          <%= f.password_field :password_confirmation, autocomplete: "off" , class: 'form-control w-75'  %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.submit "登録" , class: "btn btn-success w-75", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);' %>
+        </div>
+
+      <% end %>
       <%= render "users/shared/links" %>
+    </div>
   </div>
-<div>

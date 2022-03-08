@@ -1,3 +1,66 @@
 // Place all the styles related to the registrations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+/*********************************
+	初期設定
+*********************************/
+
+body {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 100px;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll; //y = 縦のスクロール
+  overflow-x: hidden; //x = 横のスクロールはダメですよ。
+  text-align: center;
+}
+
+/*********************************
+	formの設定
+*********************************/
+
+.margin-left_registrations_new{
+  margin-left: 200px;
+}
+
+@media screen and (max-width: 1000px) {
+  .margin-left_registrations_newt{
+    margin-left: 200px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .margin-left_registrations_new{
+    margin-left: 80px;
+  }
+}
+
+/*********************************
+	文字のスタイル
+*********************************/
+#error_explanation{
+  text-align: center;
+  margin: 20px 0px 30px 0px;
+  background-color: rgb(235, 235, 235);
+  padding: 20px 0px 20px 0px;
+  border-radius: 15px;
+  h2{
+    font-size: 1.0em;
+    letter-spacing: -2px;
+    margin:15px 0px  15px 0px;
+    text-align: center;
+    color: rgb(255, 103, 103);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  ul{
+    margin-right: 25px;
+    font-size: 0.8em;
+    color: rgb(255, 103, 103);
+    list-style: none;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+}
+
