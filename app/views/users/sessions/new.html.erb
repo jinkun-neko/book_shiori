@@ -21,7 +21,11 @@
               </label>
             </div>
         <% end %>
-          <%= f.submit "ログイン", class: "btn btn-success w-75", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);' %>
+
+          <div class="mb-3">
+            <%= f.submit "ログイン", class: "btn btn-success w-75", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);' %>
+          </div>
+          
         <% end %>
       <%= render "users/shared/links" %>
   </div>

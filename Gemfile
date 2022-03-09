@@ -14,7 +14,6 @@ gem 'carrierwave'  #ファイルをアップロードできるgem
 gem 'mini_magick'  #画像を保存できるgem
 gem 'rails-i18n' #英語を日本語に翻訳するgem
 gem 'devise'  #ログイン機能を実装する。
-gem 'omniauth-twitter' #twitter認証
 gem 'omniauth-google-oauth2'  #google認証
 gem 'omniauth-rails_csrf_protection' #omniauthに脆弱性対策
 gem 'devise-i18n'

@@ -22,18 +22,7 @@ body {
 *********************************/
 
 .margin-left_registrations_new{
-  margin-left: 200px;
-}
-
-@media screen and (max-width: 1000px) {
-  .margin-left_registrations_newt{
-    margin-left: 200px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .margin-left_registrations_new{
-    margin-left: 80px;
-  }
+  margin-left: 150px;
 }
 
 /*********************************
@@ -62,5 +51,32 @@ body {
     list-style: none;
     font-family: 'Noto Sans JP', sans-serif;
   }
+  .form-label{
+    margin-bottom: 20px;
+  }
 }
+.my-3{
+  h2{
+    font-size: 1.0em;
+    letter-spacing: -2px;
+    margin:5px 0px  20px 0px;
+    text-align: center;
+    color: rgb(119, 67, 67);
+    text-transform: uppercase;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+}
+/*********************************
+    レスポンシブ対応
+*********************************/
 
+@media screen and (max-width: 1000px) {
+  .margin-left_registrations_new{
+    margin-left: 80px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .margin-left_registrations_new{
+    margin-left: 50px;
+  }
+}

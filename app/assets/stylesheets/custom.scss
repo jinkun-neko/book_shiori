@@ -93,6 +93,11 @@ a:hover {
 li{
   margin-left: 10px;
 }
+//header_toggler
+.navbar-dark .navbar-toggler{
+  outline: none;
+  border: none;
+}
 
 @media screen and (max-width: 1000px) {
   .logo {
@@ -106,7 +111,7 @@ li{
     font-weight: bold;
   }
   .navbar-nav{
-    margin-right: 10px;
+    margin-right: 40px;
     font-size: 0.9em;
     color: #fff;
     text-transform: uppercase;
@@ -128,7 +133,36 @@ li{
     padding-top: 10px;
     font-weight: bold;
   }
+  .navbar-collapse .navbar-nav  {
+    height: 100vh;
+    margin-left: 170px;
+    margin-top: 175px;
+    li{
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    li:hover{
+      font-size: 20px;
+      margin-top: 10px;
+      color: yellow;
+    }
+  }
+  .navbar-collapse .navbar-nav .login2 {
+    height: 100vh;
+    margin-left: 180px;
+    margin-top: 200px;
+    li{
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    li:hover{
+      font-size: 20px;
+      margin-top: 10px;
+      color: yellow;
+    }
+  }
 }
+
 
 /*********************************
 	フッターの設定
@@ -173,13 +207,6 @@ footer ul li {
   margin-left: 15px;
 }
 
-//header_toggler
-.navbar-dark .navbar-toggler{
-  outline: none;
-  border: none;
-  opacity: 0.8;
-}
-
 /*********************************
 	formの設定
 *********************************/
@@ -214,4 +241,19 @@ footer ul li {
     text-decoration: rgb(255, 193, 193) wavy underline;
     font-size: 14px;
   }
+}
+.link{
+  font-size: 13px;
+  -webkit-text-stroke: 1px rgb(149, 163, 255);
+  text-decoration: none;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #76e7fe;
+}
+.link:hover{
+  font-size: 13px;
+  text-decoration: underline;
+  color: rgb(72, 173, 82);
+  -webkit-text-stroke: 1px #33643c;
+  opacity: 0.5;
+  font-family: 'Noto Sans JP', sans-serif;
 }
