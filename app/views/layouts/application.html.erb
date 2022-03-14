@@ -13,12 +13,12 @@
         <div class="container">
             <%= render 'layouts/header' %>
               <div id="center_layout">
-              <div class="alert alert-light" role="alert">
-                  <p class="notice"><%= notice %></p>
-                  <p class="alert"><%= alert %></p>
-              </div>
-                <%= yield %>
-            <%= render 'layouts/footer' %>
+                    <div class="alert alert-light" role="alert">
+                      <p class="notice"><%= notice %></p>
+                      <p class="alert"><%= alert %></p>
+                    </div>
+                  <%= yield %>
+                <%= render 'layouts/footer' %>
             </div>
           </div>
       </body>

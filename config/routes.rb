@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  root 'pages#index'
-  get '/new' , to: 'books#new'
-  get '/show' , to: 'books#show'
-  get '/edit' , to: 'books#edit'
+
+  root to: 'pages#index'
   get 'pages/show' , to: 'pages#show'
+  get '/books/new' , to: 'books#new'
+  get '/books/show' , to: 'books#show'
+  get '/books/edit' , to: 'books#edit'
+  get '/books/index' , to: 'books#index'
 
 devise_for :users, controllers: {
   sessions: 'users/sessions',

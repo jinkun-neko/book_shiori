@@ -6,6 +6,11 @@
 /*********************************
 	初期設定
 *********************************/
+
+.container{
+  margin-top: 56px;
+}
+
 body {
   margin-bottom: 10px;
   padding-top: 10px;
@@ -220,6 +225,11 @@ footer ul li {
 .form-label{
   font-size: 14px;
   color: #0B3B0B;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.form-label-red{
+  font-size: 12px;
+  color: rgb(241, 54, 54);
   font-family: 'Noto Sans JP', sans-serif;
 }
 .margin-left{

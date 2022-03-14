@@ -26,12 +26,8 @@
                         </a>
                      <ul class="dropdown-menu dropdown-menu-right ml-auto" aria-labelledby="navbarDropdownMenuLink">
                         <li><%= link_to 'プロフィール変更', edit_user_registration_path,class:"dropdown-item" %></li>
+                        <li><%= link_to "#{current_user.username}のホーム", pages_show_path,class:"dropdown-item" %></li>  
                         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"dropdown-item" %></li>
-<%
-=begin%>
-   <li><%= link_to current_user.username, pages_show_path,class:"dropdown-item" %></li>  
-   <%
-=end%>
                         </ul>
                      </li>
                   </ul>
