@@ -6,11 +6,13 @@ Devise.setup do |config|
   config.strip_whitespace_keys = [:email]
   config.skip_session_storage = [:http_auth]
 
-  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], scope: 'email', redirect_uri: "#{ENV['HOST']}/users/auth/google_oauth2/callback"
+  config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"], scope: 'email', redirect_uri: "#{ENV['HOST']}/users/auth/google_oauth2/callback"
   OmniAuth.config.logger = Rails.logger if Rails.env.development?
 
   config.stretches = Rails.env.test? ? 1 : 12
-  config.mailer_sender = "メールアドレス"
+  config.mailer_sender = ENV["GOOGLE_EMAIL"]
+  config.send_email_changed_notification = true # <= trueにすると、元のメールへ「メールアドレスの変更確認メール」を送信させる
+  config.maximum_attempts = 20 #<= 20回失敗するとアカウントロックするという意味
   config.reconfirmable = true
   config.scoped_views = true
   config.expire_all_remember_me_on_sign_out = true

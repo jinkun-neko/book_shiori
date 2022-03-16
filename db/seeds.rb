@@ -1,5 +1,8 @@
-User.create(email: 'admin@test.com', password: 'password')
-User.create(email: 'satou@test.com', password: 'password')
-User.create(email: 'suzuki@test.com', password: 'password')
-User.create(email: 'tanaka@test.com', password: 'password')
-User.create(email: 'test@test.com', password: 'password')
+users = ["yamada", "abe", "test", "tanigawa", "nakata"]
+users.each_with_index do |user, i|
+  User.create(
+    name: "#{user}",
+    email: "#{i + 1}@gamil.com",
+    password: "password"
+  )
+end

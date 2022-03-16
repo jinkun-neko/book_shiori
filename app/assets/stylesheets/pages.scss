@@ -13,13 +13,37 @@ p {
 }
 
 h1{
-  margin-top: 50px;
+  margin-top: 30px;
+}
+
+.yellow_box h2{
+  color: rgb(255, 255, 255);
+}
+.yellow_box2 h2{
+  color: rgb(255, 255, 255);
 }
 
 /*********************************
     文字のスタイル
 *********************************/
+.white_box{
+  margin-bottom: 80px;
+}
+.white_box2{
+  padding-top: 80px;
+  margin-bottom: 80px;
+}
 
-.alert-light{
-  margin-top: 50px;
+.yellow_box{
+  height: 450px;
+  padding-top: 95px;
+  background-color: rgb(217, 199, 4);
+  border-radius: 180px;
+}
+
+.yellow_box2{
+  height: 450px;
+  padding-top: 95px;
+  background-color:  rgb(217, 199, 4);
+  border-radius: 180px;
 }

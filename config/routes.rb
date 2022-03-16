@@ -7,9 +7,10 @@ Rails.application.routes.draw do
   get '/books/edit' , to: 'books#edit'
   get '/books/index' , to: 'books#index'
 
-devise_for :users, controllers: {
-  sessions: 'users/sessions',
-  registrations: "users/registrations",
-  omniauth_callbacks: 'users/omniauth_callbacks'
-  }
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: "users/registrations",
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    confirmations: "users/confirmations"
+    }
 end

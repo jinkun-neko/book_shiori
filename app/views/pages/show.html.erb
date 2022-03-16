@@ -1,6 +1,15 @@
-<div class="container">
-  <div class="row">
-    <h1>こんにちは<%= current_user.username %>さん !</h1>
-    <p>ユーザー用ページです。</p>
-  </div>
+<div class="row">
+    <div class=white_box>
+      <div class="mb-4">
+        <h1>プロフィール</h1>
+      </div>
+      <div class="mb-4">
+      </div>
+      <div class="mb-4">
+        <p>名前 : <%= current_user.username %></p>
+      </div>
+      <div class="mb-4">
+        <p>メールアドレス : <%= current_user.email %></p>
+      </div>
+    </div>
 </div>

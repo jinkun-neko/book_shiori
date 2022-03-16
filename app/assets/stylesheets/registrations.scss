@@ -28,6 +28,7 @@ body {
 /*********************************
 	文字のスタイル
 *********************************/
+
 #error_explanation{
   text-align: center;
   margin: 20px 0px 30px 0px;
@@ -71,6 +72,24 @@ body {
 	ページの見た目
 *********************************/
 
+.notice{
+  margin-bottom: -25px;
+  margin-top: 30px;
+  color: rgb(59, 111, 93);
+  text-decoration: rgb(78, 255, 193) wavy underline;
+}
+.alert-light{
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  .alert-light{
+    margin-top: 30px;
+  }
+  .row{
+  margin-top: 30px;
+  }
+}
 
 /*********************************
     レスポンシブ対応

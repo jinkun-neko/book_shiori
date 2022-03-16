@@ -7,31 +7,34 @@ class User < ApplicationRecord
 
   def update_without_current_password(params, *options)
     params.delete(:current_password)
-    if params[:password].blank? && params[:password_confirmation].blank?
+
+    if params[:password].blank? && params[:password_confirmation].blank? 
       params.delete(:password)
       params.delete(:password_confirmation)
     end
-    result = update_attributes(params, *options)
+
+    result = update(params, *options)
     clean_up_passwords
     result
   end
 
+
   protected
 
   def configure_permitted_parameters
-    # サインアップ時にnameのストロングパラメータを追加
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
-    # アカウント編集の時にnameとprofileのストロングパラメータを追加
-    devise_parameter_sanitizer.permit(:account_update, keys: [:username])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username]) # サインアップ時にnameのストロングパラメータを追加
+    devise_parameter_sanitizer.permit(:account_update, keys: [:username]) # アカウント編集の時にnameとprofileのストロングパラメータを追加
   end
 
-    # omniauthのコールバック時に呼ばれるメソッド
-  def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+  # omniauthのコールバック時に呼ばれるメソッド
+  def self.find_or_create_for_oauth(auth)
+    find_or_create_by!(email: auth.info.email) do |user|
+        user.provider = auth.provider,
+        user.uid = auth.uid,
+        user.username = auth.info.name,
+        user.email = auth.info.email,
+        user.password = Devise.friendly_token[0, 20]
     end
-      user.name = auth.info.username
-      user.email = auth.info.email
-      user.password = Devise.friendly_token[0,20]
   end
 
   def self.new_with_session(params, session)
@@ -42,4 +45,10 @@ class User < ApplicationRecord
     end
   end
 
+  private
+
+  #twitterでサインアップする時に、本来サインアップに必要なメールアドレスカラムをダミーで埋める
+  def self.dummy_email(auth)
+    "#{auth.uid}-#{auth.provider}@example.com"
+  end
 end
