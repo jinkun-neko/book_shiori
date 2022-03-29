@@ -1,21 +1,24 @@
 <% provide(:title, "ログイン") %>  
-
-    <div class="mb-4">
-      <h1>ログイン</h1>
-    </div>
-
+  <div class="container">
     <div class="row">
-      <div class="margin-left">
+    
+      <div class="mb-4">
+        <h1>ログイン</h1>
+      </div>
+
+    <div class="container">
+      <div class="row">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
+        <div class="col-md-6 offset-md-3">
           <div class="mb-4">
             <%= f.label :email, class:'form-label' %><br/>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control w-75' %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
           </div>
 
           <div class="mb-4">
             <%= f.label :password, class:'form-label' %><br/>
-            <%= f.password_field :password, autocomplete: "current-password", class: 'form-control w-75' %>
+            <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
           </div>
 
           <% if devise_mapping.rememberable? %>
@@ -25,13 +28,19 @@
                 <span>次回から自動でログイン</span>
               </label>
             </div>
+
+        <% end %>
+          <div class="mb-4">
+            <%= f.submit "ログイン", class: "btn btn-outline-success w-100" %>
+          </div>
+
         <% end %>
 
-          <div class="mb-4">
-            <%= f.submit "ログイン", class: "btn btn-outline-success  w-75" %>
+            <%= render "users/shared/links" %>
+
           </div>
-          
-        <% end %>
-      <%= render "users/shared/links" %>
+        </div>
+      </div>
+    </div>
   </div>
 <div>

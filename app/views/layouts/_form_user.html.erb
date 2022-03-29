@@ -1,0 +1,22 @@
+<%= form_with(model: @user, local: true) do |f| %>
+    <%= render 'shared/error_messages_users' %>
+        <div class="sukima">
+                <%= f.label :名前, class:'label'  %>
+            <%= f.text_field :name, class: 'form-control' %>
+        </div>
+    <div class = "sucoshi2">
+            <%= f.label :メール, class:'label' %>
+            <%= f.email_field :email, class: 'form-control' %>
+        </div> 
+        <div class = "sucoshi2">
+        <%= f.label :パスワード, class:'label'  %>
+            <%= f.password_field :password, class: 'form-control' %>
+        </div>
+        <div class = "sucoshi2">
+            <%= f.label :password_confirmation, "パスワード確認", class:'label'  %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+        <div class = "sukima">
+            <%= f.submit "登録", class: "btn btn-success", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);'%> 
+        </div>
+<% end %>

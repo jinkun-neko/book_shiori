@@ -1,0 +1,23 @@
+<div class ="show_green_box">
+    <div class = "mb-4 mt-4">
+        <%= form_with(model: @page, url: book_path, local: true) do |b| %>
+            <p><label for="rails" class="white">今日読んだページ数は？</label></p>
+            <p class="white">0  <%= b.range_field(:now_pages, min:0, max: @book.pages, id:"example", class:"slider w-75" , value:"@page.pages")  %>  <%= @book.pages %></p>
+            <p class="value white"><span id="current-value"></span>p</p>
+            <div class="text-center">
+                <%= b.submit "更新", class: "btn btn-outline-light" %>
+            </div>
+                <script type="text/javascript">
+                    const inputElem = document.getElementById('example');
+                    const currentValueElem = document.getElementById('current-value');
+                    const setCurrentValue = (val) => {
+                    currentValueElem.innerText = val;}
+                    const rangeOnChange = (e) =>{
+                    setCurrentValue(e.target.value);}
+                    window.onload = () => {
+                    inputElem.addEventListener('input', rangeOnChange);
+                    setCurrentValue(inputElem.value);}
+                </script>
+        <% end %>
+    </div>
+</div>

@@ -1,14 +1,14 @@
+<!--本の編集画面-->
 <% provide(:title, '本の編集') %>
-  <div class = "margin-top4">
-    <div class = "bottom-index">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div class = "sucoshi">
+  <div class = "book-edit">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class = "mb-4">
+
             <h1 class = "brown">本の編集</h1>
-                <%= render partial: 'layouts/form_book', locals: { article: @book } %>
-          </div>
+              <%= render partial: 'layouts/form_book', locals: { article: @book } %>
+        
       </div>
     </div>
   </div>
 </div>
-                    

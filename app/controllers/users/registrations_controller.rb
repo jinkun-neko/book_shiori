@@ -1,23 +1,26 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :configure_account_update_params, only: [:edit, :update]
+  before_action :configure_sign_up_params, only: [:create]
+  before_action :configure_account_update_params, only: [:update]
 
   def create
-    #スーパークラス(devise)のcreateアクションを呼ぶ 
     super 
-    #WelcomeMailerクラスのsend_when_signupメソッドを呼び、POSTから受け取ったuserのemailとnameを渡す
-    WelcomeMailer.send_when_signup(params[:user][:email],params[:user][:name]).deliver
   end
 
   protected
+
   
   def configure_account_update_params
     devise_parameter_sanitizer.permit(:account_update, keys: [:username])
   end
   
+  def configure_sign_up_params
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email])
+  end
+  
   def update_resource(resource, params)
-    resource.update_without_current_password(params) #独自のメソッド。解説は下記にて。
+    resource.update_without_current_password(params) #独自のメソッド
   end
 
   # 必須ではないがupdate後にtop画面にリダイレクトするメソッド

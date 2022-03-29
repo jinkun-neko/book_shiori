@@ -1,0 +1,48 @@
+<div class="container">
+      <div class="row justify-content-center">
+
+      <%= form_with(model: @book, local: true) do |f| %> 
+         <%= render 'shared/error_messages_books' %>
+
+         <div class="col-md-6 offset-md-3">
+            <div class="field">
+               <div class="mb-4 mt-3">
+                  <%= f.label :title,class: 'form-label' %><%= f.label :※必須 ,class: 'form-label-red' %>
+                  <%= f.text_field :title, class: 'form-control' %>
+               </div>
+            </div>
+
+            <div class="mb-4">
+               <div class="field">
+                  <%= f.label :new_date ,class: 'form-label'%><%= f.label :※必須 ,class: 'form-label-red' %>
+                  <%= f.date_select :new_date, {start_year: 1950,end_year: (Time.now.year),default: Date.new(2021, 1, 1)}, {class: 'form-control', style: 'display: inline-block;width: auto; margin-left: 15px;'} %>
+               </div>   
+            </div>  
+
+            <div class="mb-4">
+               <div class="field">
+                  <%= f.label :author ,class: 'form-label' %><%= f.label :※任意 ,class: 'form-label-green' %>
+                  <%= f.text_field :author, class: 'form-control'%>
+               </div>
+            </div>
+
+            <div class="mb-4">
+               <div class="field">
+                  <%= f.label :pages ,class: 'form-label' %><%= f.label :※必須 ,class: 'form-label-red' %>
+                  <%= f.text_field :pages,  class: 'form-control' ,placeholder:"半角数字のみ" %>
+               </div>
+            </div>
+
+            <div class="mb-5">
+               <div class="field">
+                  <%= f.label :image, class: 'form-label' %><%= f.label :※必須 ,class: 'form-label-red' %>
+                  <%= f.file_field :image, class: 'form-control'  %>    
+               </div>
+            </div>
+
+            <%= f.submit "作成", class: "btn btn-outline-success w-100" %>
+         </div>
+   <% end %> 
+
+   </div>
+<div>

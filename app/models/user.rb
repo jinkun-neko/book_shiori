@@ -1,23 +1,21 @@
 class User < ApplicationRecord
-  validates :username, presence: true 
 
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable,
   :omniauthable, omniauth_providers: %i[google_oauth2]
+  
+  has_many :books, dependent: :destroy , foreign_key: 'user_id'
 
   def update_without_current_password(params, *options)
     params.delete(:current_password)
-
     if params[:password].blank? && params[:password_confirmation].blank? 
       params.delete(:password)
       params.delete(:password_confirmation)
     end
-
     result = update(params, *options)
     clean_up_passwords
     result
   end
-
 
   protected
 

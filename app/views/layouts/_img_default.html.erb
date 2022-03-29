@@ -1,0 +1,28 @@
+<!--book一覧-->
+<div class="container">
+   <div class="row">
+      
+      <% @books.each do |book| %>
+         <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="mt-5">
+            
+               <p>
+                  <%= link_to ("/books/#{book.id}") do %>
+                     <% if book.image? %>
+                        <%=  image_tag book.image.url , style: 'border: solid rgb(91, 33, 0) 3px;'%>
+                     <% else %>    
+                        <%= image_tag 'cats240.jpg' , class: "book-defult", alt: "ブックデフォルト", style: 'border: solid rgb(91, 33, 0) 2px;' %>
+                     <% end %>
+                  <% end %>   
+               </p>
+
+               <p>
+                  <%= link_to book.title, "/books/#{book.id}", style: 'font-weight: bold; color:#86531c; font-size:15px; text-align:center;text-decoration: none;' %>
+               </p>
+
+            </div>
+         </div>
+      <% end %>
+
+   </div>
+</div>

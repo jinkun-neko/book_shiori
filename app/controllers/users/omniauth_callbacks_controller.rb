@@ -2,7 +2,7 @@
 
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
-    def google_oauth2
+  def google_oauth2
     callback_from(:google_oauth2)
   end
 
@@ -12,7 +12,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     if @user.persisted?
       flash[:notice] = "Googleアカウントによる認証に成功しました!"
-      sign_in_and_redirect @user
+      session[:user_id] = @user.id
+      sign_in_and_redirect @user, event: :authentication
     else
       session["devise.#{provider}_data"] = request.env['omniauth.auth']
       redirect_to new_user_registration_url

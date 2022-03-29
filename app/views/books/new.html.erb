@@ -1,13 +1,12 @@
 <% provide(:title, '本の登録') %>
-  <div class="margin-top4">
-    <div class = "bottom-index"> 
+  <div class="container">
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <h1 class = "brown">本の登録</h1>
-              <%= render partial: 'layouts/form_book', collection: book %>
-              <%= link_to image_tag("/yaji2.png", class:"turn"), books_path  %> 
-        </div>
+        <div class="book_new_pb">
+      
+        <h1>本の登録</h1>
+        <%= render partial: 'layouts/form_book', locals: {book: @book} %>
+        <%= link_to image_tag("/yaji2.png", class:"turn"), books_path  %> 
+
       </div>
+    </div>
   </div>
-</div>
-                    
